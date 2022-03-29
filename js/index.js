@@ -45,7 +45,7 @@ listarReserva ()
 
 // Criando o banner rotativo na página principal
 
-if (caminho==='/index.html'){
+if (caminho==='/index.html'||caminho==='/'){
 
     let index=0
     const banner = document.querySelectorAll('.banner-rotativo img')
