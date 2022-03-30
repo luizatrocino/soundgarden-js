@@ -1,8 +1,6 @@
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com"
 let caminho = window.location.pathname
 
-
-
 // Listando as reservas na página listar-reserva
 
 if (caminho === '/listar-reserva.html'){
