@@ -27,7 +27,7 @@ async function listarEventos () {
                 }
                 return numero
             }
-            const dataFormatada = `${formatNumber(newDate.getDate())}/${formatNumber(newDate.getMonth())}/${newDate.getFullYear()}`
+            const dataFormatada = `${formatNumber(newDate.getDate())}/${formatNumber(newDate.getMonth()+1)}/${newDate.getFullYear()}`
             const horaFormatada = `${formatNumber(newDate.getHours())}:${formatNumber(newDate.getMinutes())}`
             
             //adicionando todos os eventos cadastrados
