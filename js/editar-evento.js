@@ -30,7 +30,7 @@ showEvent();
 form.onsubmit = async (event) =>{
     event.preventDefault();
        
-   const editarEvento = {
+   const editEvent = {
        name: inputName.value,
        poster: "img link",
        attractions: inputAttractions.value.split(","),
@@ -41,7 +41,7 @@ form.onsubmit = async (event) =>{
 
     const options = {
         method: 'PUT',
-        body: JSON.stringify(editarEvento),
+        body: JSON.stringify(editEvent),
         headers: {
             "Content-Type": "application/json",
           },
