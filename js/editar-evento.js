@@ -18,6 +18,7 @@ const showEvent = async () => {
      
 
     inputName.value = respAPI.name;
+    inputBanner.value = respAPI.poster;
     inputAttractions.value = respAPI.attractions;
     inputDescription.value = respAPI.description;
     inputDate.value = respAPI.scheduled;
@@ -32,7 +33,7 @@ form.onsubmit = async (event) =>{
        
    const editEvent = {
        name: inputName.value,
-       poster: "img link",
+       poster: inputBanner.value,
        attractions: inputAttractions.value.split(","),
        description: inputDescription.value,
        scheduled: new Date(inputDate.value).toISOString(),
@@ -51,5 +52,6 @@ form.onsubmit = async (event) =>{
    const response = await fetch(`${BASE_URL}/events/${id}`, options);
    const contResp = await response.json();
    console.log(contResp)
+   alert(`Evento atualizado com sucesso!`)
    window.location.href = ("admin.html")
 }

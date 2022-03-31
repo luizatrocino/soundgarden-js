@@ -1,5 +1,7 @@
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com"
 
+
+
 async function listarEventos () {
     
     try{
@@ -15,10 +17,10 @@ async function listarEventos () {
         const tabelaEventos = document.querySelector('tbody')
         
         //contador para servir de id para o evento
-        let contador = 0
+        var contador = 1
 
         listaEventos.forEach((evento) =>{
-
+            
             //formatando a data que a API retorna
             const newDate = new Date(evento.scheduled)
             const formatNumber = (numero ) => { 
@@ -38,8 +40,8 @@ async function listarEventos () {
             <td>${evento.attractions.join()}</td>
             <td>
                 <a href="listar-reserva.html?id=${evento._id}" class="btn btn-dark">ver reservas</a>
-                <a href="editar-evento.html?id=${listaEventos[contador]._id}" class="btn btn-secondary">editar</a>
-                <a href="excluir-evento.html?id=${listaEventos[contador]._id}" class="btn btn-danger">excluir</a>
+                <a href="editar-evento.html?id=${evento._id}" class="btn btn-secondary">editar</a>
+                <a href="excluir-evento.html?id=${evento._id}" class="btn btn-danger">excluir</a>
             </td>
             </tr>` 
             
@@ -47,8 +49,8 @@ async function listarEventos () {
 
             contador++
         })
-    } catch {
-        alert("Deu algo errado na lista de eventos!")
+    } catch (erro) {
+    alert(`Deu algo errado na lista de eventos!${erro}`)
     } 
 }
 
