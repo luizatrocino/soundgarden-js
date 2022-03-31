@@ -84,7 +84,7 @@ footer nav ul li  {
 
 /* modal */
 
-.modal {
+.myModal {
     display: none;
     position:fixed;
     z-index: 1;
@@ -96,7 +96,7 @@ footer nav ul li  {
     background-color: #e91e6267;
 }
 
-.modal-content {
+.modalContent {
     background-color: aquamarine;
     margin: 15% auto;
     padding: 20px;

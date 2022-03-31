@@ -32,6 +32,7 @@ criarEvento.onclick = async (evento) => {
     const conteudoResposta = await resposta.json()
     console.log(conteudoResposta)
     window.location.href = "admin.html"
+    
   } catch {
     alert("Preencha os campos corretamente")
   }

@@ -1,41 +1,29 @@
 const BASE_URL = 'https://xp41-soundgarden-api.herokuapp.com';
 
-const opcoes = {
-    method: "GET",
-}
-
 const myModal = document.querySelector("#myModal");
 const modalContent = document.querySelector("#modalContent");
-const closeBtn = document.querySelector("#closeBtn");
-const btnReserva = document.querySelector("#btnReserva");
+const btnClose = document.querySelector("#close");
+const inputReserva = document.querySelector("#reserva");
 
-const nome = document.querySelector("#nome");
-const email = document.querySelector("#email");
-const qtdIngressos = document.querySelector("#qtd");
-let idEvento = ""
+const inputNome = document.querySelector("#nome");
+const inputEmail = document.querySelector("#email");
+const inputQtd = document.querySelector("#qtd");
 
-const eventoAbrirModal = (id) => {
-    const btnModal = document.querySelector(`#btn${id}`);
-    console.log(btnModal)
-    btnModal.addEventListener("click", (evento)=>{
-        myModal.style.display = "block";
-        console.log(btnModal.id.slice(3));
-        idEvento = btnModal.id.slice(3);
-    });
-    
-}
-
-btnReserva.addEventListener("click", async (evento)=>{
+inputReserva.onclick = async (evento)=>{
     evento.preventDefault();
+    myModal.style.display = 'block';
+
     try{
         reserva = {
-            owner_name: nome.value,
-            owner_email: email.value,
-            number_tickets: qtdIngressos.value,
+            owner_name: inputNome.value,
+            owner_email: inputEmail.value,
+            number_tickets: inputQtd.value,
             event_id: idEvento
         };
+
         console.log(reserva);
-        const reqOptions = {
+
+        const options = {
             method: 'POST',
             body: JSON.stringify(reserva),
             headers: {
@@ -43,17 +31,17 @@ btnReserva.addEventListener("click", async (evento)=>{
             }
         };
 
-        const resposta = await fetch(`${BASE_URL}/bookings`,reqOptions);
+        const resposta = await fetch(`${BASE_URL}/bookings`,options);
         console.log(resposta);
 
-        alert('Reservada realizada')
-        window.location.href = "index.html"
-    }catch {
-        alert('Erro na reserva: reveja os campos e tente novamente')
+        alert("Reserva confirmada! Bom show!");
+
+    } catch {
+        alert("Preencha os campos corretamente");
     }
 });
 
-closeBtn.addEventListener("click", (evento)=>{
+btnClose.addEventListener("click", (evento)=>{
     evento.preventDefault();
     myModal.style.display = "none";
 });
@@ -62,4 +50,4 @@ window.onclick = function(event) {
     if (event.target == myModal) {
       myModal.style.display = "none";
     }
-  }
+  };
