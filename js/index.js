@@ -1,5 +1,5 @@
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com"
-<<<<<<< HEAD
+
 let caminho = window.location.pathname
 
 // Listando as reservas na página listar-reserva
@@ -41,8 +41,7 @@ if (caminho === '/listar-reserva.html'){
 listarReserva ()
 }
 
-=======
->>>>>>> 238e68493450af4435ae49fdfa128b25b2f5c64c
+
 
 // Criando o banner rotativo na página principal
 
