@@ -86,20 +86,21 @@
     <div id="myModal">
         <div id="modalContent">
             <form action="">
-                <label for="nome" class="modal-form">Nome</label>
-                <input type="text" name="nome" id="nome" class="form-control">
-                <label for="email" class="modal-form">Email</label>
-                <input type="email" name="email" id="email" class="form-control">
-                <label for="qtd" class="modal-form">Quantidade</label>
-                <input type="number" name="qtd" id="qtd" class="form-control">
-                <button type="submit" id="reserva" class="btn btn-danger">Reservar</button>
-                <button id="close" class="btn btn-secondary">Fechar</button>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="qtd">Quantidade</label>
+                <input type="number" name="qtd" id="qtd">
+                <input type="text" id="event-id" hidden>
+                <a type="submit" id="reserva" class="btn btn-danger">Reservar</a>
+                <a id="close" class="btn btn-secondary">Fechar</a>
 
             </form>
         </div>
+    </div>
         
     <script src="js/eventos.js"></script>
-    <script src="js/modal.js"></script>
 </body>
 
 </html>

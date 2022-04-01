@@ -31,6 +31,6 @@ showEvent()
 form.onsubmit = async (event) => {
   event.preventDefault()
   await fetch(`${BASE_URL}/events/${id}`, { method: "DELETE" })
-  alert(`Evento deletado com sucesso!`)
+  // alert(`Evento deletado com sucesso!`)
   window.location.href = "admin.html"
 }
