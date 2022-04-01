@@ -13,7 +13,7 @@ criarEvento.onclick = async (evento) => {
   try {
     const novoEvento = {
       name: inputNome.value,
-      poster: "link da imagem",
+      poster: " ",
       attractions: inputAtracoes.value.split(","),
       description: inputDescricao.value,
       scheduled: new Date(inputData.value).toISOString(),

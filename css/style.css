@@ -82,14 +82,14 @@ footer nav ul li  {
     opacity:1;
 }
 
-form {
+#form-modal {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     color: #fff;
 }
 
-form input {
+#form-modal input {
     border: none;
     border-radius: 5px;
 }

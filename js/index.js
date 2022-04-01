@@ -53,7 +53,7 @@ async function listarEventos () {
                 }
                 return numero
             }
-            const dataFormatada = `${formatNumber(newDate.getDate())}/${formatNumber(newDate.getMonth())}/${newDate.getFullYear()}`
+            const dataFormatada = `${formatNumber(newDate.getDate())}/${formatNumber(newDate.getMonth()+1)}/${newDate.getFullYear()}`
 
             //adicionando o painel de 3 eventos na div do html
             let eventoPainel = `<article class="evento card p-5 m-3">
