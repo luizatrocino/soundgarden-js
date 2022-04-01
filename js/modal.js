@@ -39,7 +39,7 @@ inputReserva.onclick = async (evento)=>{
     } catch {
         alert("Preencha os campos corretamente");
     }
-});
+};
 
 btnClose.addEventListener("click", (evento)=>{
     evento.preventDefault();
