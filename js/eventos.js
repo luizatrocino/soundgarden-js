@@ -1,4 +1,5 @@
-const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com"
+ 
+ const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com"
 const inputReserva = document.querySelector("#reserva");
 const inputNome = document.querySelector("#nome");
 const inputEmail = document.querySelector("#email");

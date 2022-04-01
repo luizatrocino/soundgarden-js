@@ -37,6 +37,23 @@
                     <a href="#" class="btn btn-primary">reservar ingresso</a>
                 </article> -->
             </div>
+
+            <div id="myModal">
+                <div id="modalContent">
+                    <form action="">
+                        <a id="close">X</a>
+                        <label for="nome" class="model-form">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                        <label for="email" class="model-form">Email</label>
+                        <input type="email" name="email" id="email">
+                        <label for="qtd" class="model-form">Quantidade</label>
+                        <input type="number" name="qtd" id="qtd">
+                        <input type="text" id="event-id" hidden>
+                        <a type="submit" id="reserva">Reservar</a>
+                    </form>
+                </div>
+            </div>
+            
             <div class="container text-center">
                 <a href="eventos.html" class="btn btn-secondary">ver todos os eventos</a>
             </div>
@@ -90,24 +107,7 @@
         </div>
     </footer>
 
-    <div id="myModal">
-        <div id="modalContent">
-            <form action="">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="qtd">Quantidade</label>
-                <input type="number" name="qtd" id="qtd">
-                <input type="text" id="event-id" hidden>
-                <a type="submit" id="reserva" class="btn btn-danger">Reservar</a>
-                <a id="close" class="btn btn-secondary">Fechar</a>
-
-            </form>
-        </div>
-    </div>
-
-    <script src="js/index.js"""></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
