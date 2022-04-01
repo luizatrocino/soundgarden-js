@@ -1,5 +1,5 @@
  
- const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com"
+const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com"
 const inputReserva = document.querySelector("#reserva");
 const inputNome = document.querySelector("#nome");
 const inputEmail = document.querySelector("#email");
@@ -33,10 +33,8 @@ async function listarEventos () {
                 return numero
             }
             const dataFormatada = `${formatNumber(newDate.getDate())}/${formatNumber(newDate.getMonth())}/${newDate.getFullYear()}`
-            
-            
-
-             //adicionando o painel de 3 eventos na div do html
+                       
+             //adicionando o painel de 9 eventos na div do html
              let eventoPainel = `<article class="evento card p-5 m-3">
              <h2>${evento.name} - ${dataFormatada}</h2>
              <h4>${evento.attractions.join()}</h4>
@@ -63,7 +61,6 @@ async function listarEventos () {
         })
 
     
-
         inputReserva.onclick= async (evento)=>{
             try{
                 var reserva = {
