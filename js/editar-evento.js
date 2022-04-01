@@ -52,6 +52,6 @@ form.onsubmit = async (event) =>{
    const response = await fetch(`${BASE_URL}/events/${id}`, options);
    const contResp = await response.json();
    console.log(contResp)
-   alert(`Evento atualizado com sucesso!`)
+//    alert(`Evento atualizado com sucesso!`)
    window.location.href = ("admin.html")
 }

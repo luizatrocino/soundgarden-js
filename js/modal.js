@@ -1,18 +1,25 @@
-const BASE_URL = 'https://xp41-soundgarden-api.herokuapp.com';
-
+// const BASE_URL = 'https://xp41-soundgarden-api.herokuapp.com';
+const btnReserva  = document.querySelector('#nova_reserva')
 const myModal = document.querySelector("#myModal");
 const modalContent = document.querySelector("#modalContent");
 const btnClose = document.querySelector("#close");
 const inputReserva = document.querySelector("#reserva");
 
+const parametros = new URLSearchParams(window.location.search)
+const idEvento = parametros.get('id')
+
 const inputNome = document.querySelector("#nome");
 const inputEmail = document.querySelector("#email");
 const inputQtd = document.querySelector("#qtd");
 
-inputReserva.onclick = async (evento)=>{
+myModal.style.display = "none"
+
+btnReserva.onclick = async (evento)=>{
     evento.preventDefault();
     myModal.style.display = 'block';
+}
 
+inputReserva.onclick= async (evento)=>{
     try{
         reserva = {
             owner_name: inputNome.value,
@@ -46,7 +53,7 @@ btnClose.addEventListener("click", (evento)=>{
     myModal.style.display = "none";
 });
 
-window.onclick = function(event) {
+window.onclick = (event) => {
     if (event.target == myModal) {
       myModal.style.display = "none";
     }
